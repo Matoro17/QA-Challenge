@@ -4,6 +4,10 @@
 name: Node.js CI
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/regression_ci.yml"
   schedule:
     - cron:  '30 5 * * *'
 
