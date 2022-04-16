@@ -8,10 +8,11 @@
         "@wdio/mocha-framework": "^7.19.5",
         "@wdio/spec-reporter": "^7.19.5",
         "chromedriver": "^100.0.0",
-        "wdio-chromedriver-service": "^7.2.8"
+        "wdio-chromedriver-service": "^7.2.8",
     },
     "scripts": {
-        "wdio": "wdio run wdio.conf.js"
+        "test": "wdio run wdio.conf.js",
+        "test:local": "wdio run wdio.local.conf.js"
     },
     "dependencies": {
         "dotenv": "^16.0.0",
