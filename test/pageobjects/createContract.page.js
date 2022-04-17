@@ -83,7 +83,7 @@ class CreateContractPage extends Page {
     }
 
     get nextButton () {
-        return $('button[type="submit"]')
+        return $('//button/div[contains(text(),"next")]')
     }
 
     get nextButton3 () {
