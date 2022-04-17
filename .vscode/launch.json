@@ -9,7 +9,7 @@
             "type": "node-terminal",
             "request": "launch",
             "name": "Launch Tests",
-            "command": "npm run wdio"
+            "command": "npm run test"
         }
     ]
 }
