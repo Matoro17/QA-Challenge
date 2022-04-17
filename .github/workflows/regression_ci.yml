@@ -6,14 +6,13 @@ name: Node.js CI
 on:
   push:
     branches: [main]
-    paths:
-      - ".github/workflows/regression_ci.yml"
+    #paths:
+    #  - ".github/workflows/regression_ci.yml"
   schedule:
     - cron:  '30 5 * * *'
 
 jobs:
   build:
-  
     runs-on: ubuntu-latest
 
     strategy:
@@ -28,5 +27,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+        TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
+        TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
+        USER: ${{ secrets.USER }}
     - run: npm ci
     - run: npm run test:local
