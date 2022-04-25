@@ -8,8 +8,8 @@ on:
     branches: [main]
     #paths:
     #  - ".github/workflows/regression_ci.yml"
-  schedule:
-    - cron:  '30 5 * * *'
+  # schedule:
+    # - cron:  '30 5 * * *'
 
 jobs:
   build:
